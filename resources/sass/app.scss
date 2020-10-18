@@ -1,0 +1,72 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$color-sc-main: #60aabf;
+$color-sc-sub: #384171;
+
+body {
+  font-family: 'Nunito', 'Noto Sans JP', 'sans-serif';
+  background: linear-gradient(-135deg, $color-sc-main, $color-sc-sub);
+  color: #fff;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+#main-container.container {
+  height: 100vh;
+  overflow: hidden;
+  max-width: 100%;
+  > .row {
+    > .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+      .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+#row-one {
+  height: 30%;
+  padding: 10px 0 0;
+}
+#row-two {
+  height: 35%;
+  padding: 10px 0;
+}
+#row-three {
+  height: 35%;
+  padding: 0 0 10px;
+}
+
+.card {
+  background: rgba(50, 50, 50, 0.3);
+  border: none;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+  height: 100%;
+
+  .card-header {
+    background: none;
+    border: none;
+  }
+
+  .card-body {
+    padding-top: 0;
+    .card-footer {
+      border: none;
+      background: none;
+      padding: 0;
+    }
+  }
+}
+
+.k-progress {
+  margin: 0 0 5px !important;
+  .k-progress-outer {
+    padding: 0 !important;;
+  }
+}
