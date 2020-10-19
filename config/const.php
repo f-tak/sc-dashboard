@@ -43,8 +43,8 @@ return [
             'name' => '和歌山線',
         ],
         [
-            'company' => 'JR西日本',
-            'name' => 'きのくに線',
+            'company' => '南海電気鉄道',
+            'name' => '加太線',
         ],
         [
             'company' => '南海電気鉄道',
