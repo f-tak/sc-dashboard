@@ -16353,6 +16353,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {}
 });
@@ -16746,7 +16753,7 @@ __webpack_require__.r(__webpack_exports__);
       hourly_list: null,
       daily_list: null,
       last_modified: null,
-      modify_interval_max: 600 * 60,
+      modify_interval_max: 600 * 20,
       modify_interval_value: 0,
       modify_interval_percent: 0,
       interval_id: null
@@ -21226,7 +21233,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".date[data-v-a641213a], .time[data-v-a641213a] {\n  margin-bottom: 0 !important;\n  line-height: 1;\n}\n.date[data-v-a641213a] {\n  font-size: 2vw;\n}\n.time[data-v-a641213a] {\n  font-size: 4vw;\n}", ""]);
+exports.push([module.i, ".card-header[data-v-a641213a] {\n  font-size: 2vw;\n}\n.date[data-v-a641213a], .time[data-v-a641213a] {\n  margin-bottom: 0 !important;\n  line-height: 1;\n}\n.date[data-v-a641213a] {\n  font-size: 2vw;\n}\n.time[data-v-a641213a] {\n  font-size: 4vw;\n}", ""]);
 
 // exports
 
@@ -21245,7 +21252,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".news-item[data-v-52fcf46e] {\n  display: none;\n}\n.news-item .title[data-v-52fcf46e] {\n  font-size: 2vw;\n}\n.news-item .title a[data-v-52fcf46e] {\n  color: #bce6ff;\n}\n.news-item .date[data-v-52fcf46e] {\n  text-align: right;\n}\n.news-item .description[data-v-52fcf46e] {\n  font-size: 1.5vw;\n}", ""]);
+exports.push([module.i, ".news-item[data-v-52fcf46e] {\n  display: none;\n}\n.news-item .title[data-v-52fcf46e] {\n  font-size: 2vw;\n}\n.news-item .date[data-v-52fcf46e] {\n  text-align: right;\n}\n.news-item .description[data-v-52fcf46e] {\n  font-size: 1.5vw;\n}", ""]);
 
 // exports
 
@@ -53197,11 +53204,36 @@ var render = function() {
         "div",
         { staticClass: "row flex-nowrap", attrs: { id: "row-three" } },
         [_c("div", { staticClass: "col-12" }, [_c("news-card")], 1)]
-      )
+      ),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v("\n\n    https://github.com/f-tak/sc-dashboard\n")
     ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "row flex-nowrap", attrs: { id: "row-footer" } },
+      [
+        _c("div", { staticClass: "col-12" }, [
+          _c("p", { staticClass: "text-center" }, [
+            _vm._v("GitHub "),
+            _c(
+              "a",
+              { attrs: { href: "https://github.com/f-tak/sc-dashboard" } },
+              [_vm._v("https://github.com/f-tak/sc-dashboard")]
+            )
+          ])
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 

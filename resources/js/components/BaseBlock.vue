@@ -18,6 +18,13 @@
                 <news-card></news-card>
             </div>
         </div>
+        <div id="row-footer" class="row flex-nowrap">
+            <div class="col-12">
+                <p class="text-center">GitHub <a href="https://github.com/f-tak/sc-dashboard">https://github.com/f-tak/sc-dashboard</a></p>
+            </div>
+        </div>
+
+        https://github.com/f-tak/sc-dashboard
     </div>
 </template>
 

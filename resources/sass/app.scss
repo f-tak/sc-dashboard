@@ -18,6 +18,10 @@ body {
   text-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
 }
 
+a {
+  color: #bce6ff;
+}
+
 #main-container.container {
   height: 100vh;
   overflow: hidden;
@@ -39,8 +43,11 @@ body {
   padding: 10px 0;
 }
 #row-three {
-  height: 35%;
+  height: 32%;
   padding: 0 0 10px;
+}
+#row-footer {
+  height: 3%;
 }
 
 .card {
