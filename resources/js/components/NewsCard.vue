@@ -130,9 +130,6 @@
         display: none;
         .title {
             font-size: 2vw;
-            a {
-                color: #bce6ff;
-            }
         }
         .date {
             text-align: right;

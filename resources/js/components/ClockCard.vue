@@ -52,6 +52,9 @@
 </script>
 
 <style lang="scss" scoped>
+    .card-header {
+        font-size: 2vw;
+    }
     .date, .time {
         margin-bottom: 0 !important;
         line-height: 1;

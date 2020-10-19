@@ -87,7 +87,7 @@
                 hourly_list: null,
                 daily_list: null,
                 last_modified: null,
-                modify_interval_max: 600 * 60,
+                modify_interval_max: 600 * 20,
                 modify_interval_value: 0,
                 modify_interval_percent: 0,
                 interval_id: null,
