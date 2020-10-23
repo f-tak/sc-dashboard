@@ -61,7 +61,7 @@
                 // 更新インターバルが0ならAPI実行
                 if (self.modify_interval_value === 0) {
                     // 遅延路線情報取得
-                    axios.get('/sc-dashboard/public/api/train').then(response => {
+                    axios.get('/api/train').then(response => {
                         self.railway_lines = response.data;
                     }).catch(err => {
                     }).finally({

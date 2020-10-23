@@ -84,7 +84,7 @@
                 // 更新インターバルが0ならAPI実行
                 if (self.modify_interval_value === 0) {
                     // ニュース取得
-                    axios.get('/sc-dashboard/public/api/news').then(response => {
+                    axios.get('/api/news').then(response => {
                         self.news_list = response.data;
                     }).catch(err => {
                     }).finally({
