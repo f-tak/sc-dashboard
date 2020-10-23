@@ -77,7 +77,7 @@
                 // 更新インターバルを進める
                 self.modify_interval_value += 1;
                 // 更新インターバルのパーセント計算
-                self.modify_interval_percent = (self.modify_interval_value / self.modify_interval_max) * tenth_seconds;
+                self.modify_interval_percent = (self.modify_interval_value / self.modify_interval_max) * 100;
 
                 // 初回時の実行
                 return getTrain;
