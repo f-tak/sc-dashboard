@@ -16524,7 +16524,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (self.modify_interval_value === 0) {
         // ニュース取得
-        axios.get('/sc-dashboard/public/api/news').then(function (response) {
+        axios.get('/api/news').then(function (response) {
           self.news_list = response.data;
         })["catch"](function (err) {})["finally"]({}); // 最終更新日時
 
@@ -16629,7 +16629,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (self.modify_interval_value === 0) {
         // 遅延路線情報取得
-        axios.get('/sc-dashboard/public/api/train').then(function (response) {
+        axios.get('/api/train').then(function (response) {
           self.railway_lines = response.data;
         })["catch"](function (err) {})["finally"]({}); // 最終更新日時
 
@@ -16799,8 +16799,8 @@ __webpack_require__.r(__webpack_exports__);
 
       if (self.modify_interval_value === 0) {
         // 気象情報取得
-        axios.get('/sc-dashboard/public/api/news').then(function (response) {
-          axios.get('/sc-dashboard/public/api/weather').then(function (response) {
+        axios.get('/api/news').then(function (response) {
+          axios.get('/api/weather').then(function (response) {
             self.hourly_list = response.data.hourly;
             self.daily_list = response.data.daily;
           })["catch"](function (err) {})["finally"]({});
