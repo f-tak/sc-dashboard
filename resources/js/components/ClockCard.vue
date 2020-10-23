@@ -19,7 +19,7 @@
             }
         },
         mounted () {
-            axios.get('/sc-dashboard/public/api/clock').then(response => {
+            axios.get('/api/clock').then(response => {
                 this.app_name = response.data;
             }).catch(err => {
             }).finally({
