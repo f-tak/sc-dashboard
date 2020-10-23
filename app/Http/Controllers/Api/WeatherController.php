@@ -35,11 +35,19 @@ class WeatherController extends Controller
             if ($index >= config('const.weather_hourly_interval') * config('const.weather_hourly_count')) {
                 break;
             }
+
+            // 降水量
+            $rain = array_key_exists('rain', $hourly) ? $hourly['rain']['1h'] : null;
+            // 降雪量
+            $snow = array_key_exists('snow', $hourly) ? $hourly['snow']['1h'] : null;
+
             if ($index % config('const.weather_hourly_interval') === 0) {
                 $this->return_json['hourly'][] = [
                     'dt' => $hourly['dt'],
                     'temp' => $hourly['temp'],
                     'weather' => $hourly['weather'],
+                    'rain' => $rain,
+                    'show' => $snow,
                 ];
             }
         }
@@ -49,10 +57,18 @@ class WeatherController extends Controller
             if ($index >= config('const.weather_daily_count')) {
                 break;
             }
+
+            // 降水量
+            $rain = array_key_exists('rain', $daily) ? $daily['rain'] : null;
+            // 降雪量
+            $snow = array_key_exists('snow', $daily) ? $daily['snow'] : null;
+
             $this->return_json['daily'][] = [
                 'dt' => $daily['dt'],
                 'temp' => $daily['temp'],
                 'weather' => $daily['weather'],
+                'rain' => $rain,
+                'show' => $snow,
             ];
         }
 

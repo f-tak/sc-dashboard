@@ -43,7 +43,7 @@
             return {
                 railway_lines: null,
                 last_modified: null,
-                modify_interval_max: one_minute * 5,
+                modify_interval_max: 600 * 5,
                 modify_interval_value: 0,
                 modify_interval_percent: 0,
                 interval_id: null,

@@ -47,6 +47,20 @@
                                     <font-awesome-icon icon="smog" v-if="item.icon === '50n'" />
                                 </div>
                             </div>
+                            <div class="col-12 row">
+                                <div class="col-6 text-center precipitation" >
+                                    <font-awesome-icon icon="tint" />
+                                    <span v-if="hourly.rain">{{ hourly.rain }}</span>
+                                    <span v-else>0</span>
+                                    mm
+                                </div>
+                                <div class="col-6 text-center snowfall" >
+                                    <font-awesome-icon icon="snowflake" />
+                                    <span v-if="hourly.snow"> {{ hourly.snow }}</span>
+                                    <span v-else>0</span>
+                                    mm
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,6 +86,20 @@
                                     <font-awesome-icon icon="smog" v-if="item.icon === '50d'" />
                                 </div>
                             </div>
+                            <div class="col-12 row">
+                                <div class="col-6 text-center precipitation" >
+                                    <font-awesome-icon icon="tint" />
+                                    <span v-if="daily.rain">{{ daily.rain }}</span>
+                                    <span v-else>0</span>
+                                    mm
+                                </div>
+                                <div class="col-6 text-center snowfall" >
+                                    <font-awesome-icon icon="snowflake" />
+                                    <span v-if="daily.snow"> {{ daily.snow }}</span>
+                                    <span v-else>0</span>
+                                    mm
+                                </div>
+                            </div>
                         </div>
                    </div>
                 </div>
@@ -87,7 +115,7 @@
                 hourly_list: null,
                 daily_list: null,
                 last_modified: null,
-                modify_interval_max: one_minute * 20,
+                modify_interval_max: 600 * 20,
                 modify_interval_value: 0,
                 modify_interval_percent: 0,
                 interval_id: null,
@@ -130,7 +158,7 @@
 
                 // 初回時の実行
                 return getWeather;
-            }()), tenth_seconds);
+            }()), 100);
         },
         beforeDestroy () {
             // ページ遷移時にポーリング解除
@@ -159,13 +187,19 @@
                 margin-bottom: 5px;
             }
             .icon {
-                font-size: 3vw;
+                font-size: 2.5vw;
             }
             .temp {
 
                 text-align: right;
                 color: $temp-color;
                 margin: 0;
+            }
+            .precipitation, .snowfall {
+                font-size: 0.8vw;
+            }
+            .col-6 {
+                margin: 0 !important;
             }
         }
     }
@@ -179,7 +213,7 @@
                 margin-bottom: 5px;
             }
             .icon {
-                font-size: 3vw;
+                font-size: 2.5vw;
             }
             .temp-min {
                 text-align: right;
@@ -190,6 +224,12 @@
                 text-align: right;
                 color: $max-color;
                 margin: 0;
+            }
+            .precipitation, .snowfall {
+                font-size: 0.8vw;
+            }
+            .col-6 {
+                margin: 0 !important;
             }
         }
     }

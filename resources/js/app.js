@@ -36,9 +36,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 import KProgress from 'k-progress';
 Vue.component('k-progress', KProgress);
 
-import constant from 'mixins/Constant';
-
 const app = new Vue({
-    mixins: [ constant ],
     el: '#app',
 });

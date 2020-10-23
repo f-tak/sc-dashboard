@@ -46,10 +46,10 @@
             return {
                 news_list: null,
                 last_modified: null,
-                modify_interval_max: one_minute * 10,
+                modify_interval_max: 600 * 10,
                 modify_interval_value: 0,
                 modify_interval_percent: 0,
-                change_interval_max: one_minute,
+                change_interval_max: 600,
                 change_interval_value: 0,
                 change_interval_percent: 0,
                 display_news_index: 0,
@@ -114,7 +114,7 @@
 
                 // 初回時の実行
                 return getNews;
-            }()), tenth_seconds);
+            }()), 100);
         },
         beforeDestroy () {
             // ページ遷移時にポーリング解除

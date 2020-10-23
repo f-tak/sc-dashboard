@@ -16406,9 +16406,9 @@ __webpack_require__.r(__webpack_exports__);
       var year = this.now.getFullYear();
       var month = this.now.getMonth() + 1;
       var day = this.now.getDate();
-      var dayOfWeek = this.now.getDay();
-      var dayOfWeekStr = ['日', '月', '火', '水', '木', '金', '土'][dayOfWeek];
-      return year + '/' + month + '/' + day + '(' + dayOfWeekStr + ')';
+      var day_of_week = this.now.getDay();
+      var day_of_week_str = ['日', '月', '火', '水', '木', '金', '土'][day_of_week];
+      return year + '/' + month + '/' + day + '(' + day_of_week_str + ')';
     },
     time: function time() {
       return this.now.toLocaleTimeString();
@@ -16420,7 +16420,7 @@ __webpack_require__.r(__webpack_exports__);
       var self = this;
       setTimeout(function () {
         self.refresh();
-      }, 1000);
+      }, tenth_seconds);
     }
   },
   created: function created() {
@@ -16643,7 +16643,7 @@ __webpack_require__.r(__webpack_exports__);
 
       self.modify_interval_value += 1; // 更新インターバルのパーセント計算
 
-      self.modify_interval_percent = self.modify_interval_value / self.modify_interval_max * 100; // 初回時の実行
+      self.modify_interval_percent = self.modify_interval_value / self.modify_interval_max * tenth_seconds; // 初回時の実行
 
       return getTrain;
     }(), 100);
@@ -16665,6 +16665,34 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -21290,7 +21318,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".hourly[data-v-e01253ee], .daily[data-v-e01253ee] {\n  display: flex;\n  height: 50%;\n  font-size: 1vw;\n}\n.hourly .hourly-item[data-v-e01253ee] {\n  width: 16%;\n  margin: 0 2% 10px;\n  padding: 5px;\n  background: rgba(50, 50, 50, 0.3);\n}\n.hourly .hourly-item .hour[data-v-e01253ee] {\n  margin-bottom: 5px;\n}\n.hourly .hourly-item .icon[data-v-e01253ee] {\n  font-size: 3vw;\n}\n.hourly .hourly-item .temp[data-v-e01253ee] {\n  text-align: right;\n  color: #c4ffb8;\n  margin: 0;\n}\n.daily .daily-item[data-v-e01253ee] {\n  width: 16%;\n  margin: 0 2%;\n  padding: 5px;\n  background: rgba(50, 50, 50, 0.3);\n}\n.daily .daily-item .date[data-v-e01253ee] {\n  margin-bottom: 5px;\n}\n.daily .daily-item .icon[data-v-e01253ee] {\n  font-size: 3vw;\n}\n.daily .daily-item .temp-min[data-v-e01253ee] {\n  text-align: right;\n  color: #b8fff5;\n  margin: 0;\n}\n.daily .daily-item .temp-max[data-v-e01253ee] {\n  text-align: right;\n  color: #ffb8b8;\n  margin: 0;\n}", ""]);
+exports.push([module.i, ".hourly[data-v-e01253ee], .daily[data-v-e01253ee] {\n  display: flex;\n  height: 50%;\n  font-size: 1vw;\n}\n.hourly .hourly-item[data-v-e01253ee] {\n  width: 16%;\n  margin: 0 2% 10px;\n  padding: 5px;\n  background: rgba(50, 50, 50, 0.3);\n}\n.hourly .hourly-item .hour[data-v-e01253ee] {\n  margin-bottom: 5px;\n}\n.hourly .hourly-item .icon[data-v-e01253ee] {\n  font-size: 2.5vw;\n}\n.hourly .hourly-item .temp[data-v-e01253ee] {\n  text-align: right;\n  color: #c4ffb8;\n  margin: 0;\n}\n.hourly .hourly-item .precipitation[data-v-e01253ee], .hourly .hourly-item .snowfall[data-v-e01253ee] {\n  font-size: 0.8vw;\n}\n.hourly .hourly-item .col-6[data-v-e01253ee] {\n  margin: 0 !important;\n}\n.daily .daily-item[data-v-e01253ee] {\n  width: 16%;\n  margin: 0 2%;\n  padding: 5px;\n  background: rgba(50, 50, 50, 0.3);\n}\n.daily .daily-item .date[data-v-e01253ee] {\n  margin-bottom: 5px;\n}\n.daily .daily-item .icon[data-v-e01253ee] {\n  font-size: 2.5vw;\n}\n.daily .daily-item .temp-min[data-v-e01253ee] {\n  text-align: right;\n  color: #b8fff5;\n  margin: 0;\n}\n.daily .daily-item .temp-max[data-v-e01253ee] {\n  text-align: right;\n  color: #ffb8b8;\n  margin: 0;\n}\n.daily .daily-item .precipitation[data-v-e01253ee], .daily .daily-item .snowfall[data-v-e01253ee] {\n  font-size: 0.8vw;\n}\n.daily .daily-item .col-6[data-v-e01253ee] {\n  margin: 0 !important;\n}", ""]);
 
 // exports
 
@@ -53640,7 +53668,41 @@ var render = function() {
                     )
                   }),
                   0
-                )
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-12 row" }, [
+                  _c(
+                    "div",
+                    { staticClass: "col-6 text-center precipitation" },
+                    [
+                      _c("font-awesome-icon", { attrs: { icon: "tint" } }),
+                      _vm._v(" "),
+                      hourly.rain
+                        ? _c("span", [_vm._v(_vm._s(hourly.rain))])
+                        : _c("span", [_vm._v("0")]),
+                      _vm._v(
+                        "\n                                mm\n                            "
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-6 text-center snowfall" },
+                    [
+                      _c("font-awesome-icon", { attrs: { icon: "snowflake" } }),
+                      _vm._v(" "),
+                      hourly.snow
+                        ? _c("span", [_vm._v(" " + _vm._s(hourly.snow))])
+                        : _c("span", [_vm._v("0")]),
+                      _vm._v(
+                        "\n                                mm\n                            "
+                      )
+                    ],
+                    1
+                  )
+                ])
               ])
             ])
           }),
@@ -53729,7 +53791,41 @@ var render = function() {
                     )
                   }),
                   0
-                )
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-12 row" }, [
+                  _c(
+                    "div",
+                    { staticClass: "col-6 text-center precipitation" },
+                    [
+                      _c("font-awesome-icon", { attrs: { icon: "tint" } }),
+                      _vm._v(" "),
+                      daily.rain
+                        ? _c("span", [_vm._v(_vm._s(daily.rain))])
+                        : _c("span", [_vm._v("0")]),
+                      _vm._v(
+                        "\n                                mm\n                            "
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-6 text-center snowfall" },
+                    [
+                      _c("font-awesome-icon", { attrs: { icon: "snowflake" } }),
+                      _vm._v(" "),
+                      daily.snow
+                        ? _c("span", [_vm._v(" " + _vm._s(daily.snow))])
+                        : _c("span", [_vm._v("0")]),
+                      _vm._v(
+                        "\n                                mm\n                            "
+                      )
+                    ],
+                    1
+                  )
+                ])
               ])
             ])
           }),
