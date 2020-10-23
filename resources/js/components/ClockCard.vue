@@ -42,7 +42,7 @@
             refresh: function () {
                 this.now = new Date();
                 const self = this;
-                setTimeout(() => { self.refresh() }, tenth_seconds);
+                setTimeout(() => { self.refresh() }, 100);
             }
         },
         created: function () {
