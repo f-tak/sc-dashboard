@@ -29,7 +29,7 @@ class WeatherController extends Controller
         $response_json  = $response->body();
         // Jsonデコード
         $weather = json_decode($response_json, true );
-Log::debug($weather);
+
         // 時間別
         foreach ($weather['hourly'] as $index => $hourly) {
             if ($index >= config('const.weather_hourly_interval') * config('const.weather_hourly_count')) {
