@@ -43,7 +43,7 @@
             return {
                 railway_lines: null,
                 last_modified: null,
-                modify_interval_max: 600 * 5,
+                modify_interval_max: one_minute * 5,
                 modify_interval_value: 0,
                 modify_interval_percent: 0,
                 interval_id: null,
@@ -77,7 +77,7 @@
                 // 更新インターバルを進める
                 self.modify_interval_value += 1;
                 // 更新インターバルのパーセント計算
-                self.modify_interval_percent = (self.modify_interval_value / self.modify_interval_max) * 100;
+                self.modify_interval_percent = (self.modify_interval_value / self.modify_interval_max) * tenth_seconds;
 
                 // 初回時の実行
                 return getTrain;

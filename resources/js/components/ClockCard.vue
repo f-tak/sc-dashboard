@@ -30,9 +30,9 @@
                 let year = this.now.getFullYear();
                 let month = this.now.getMonth() + 1;
                 let day = this.now.getDate();
-                let dayOfWeek = this.now.getDay();
-                let dayOfWeekStr = [ '日', '月', '火', '水', '木', '金', '土' ][dayOfWeek] ;
-                return year + '/' + month + '/' + day + '(' + dayOfWeekStr + ')';
+                let day_of_week = this.now.getDay();
+                let day_of_week_str = [ '日', '月', '火', '水', '木', '金', '土' ][day_of_week] ;
+                return year + '/' + month + '/' + day + '(' + day_of_week_str + ')';
             },
             time: function () {
                 return this.now.toLocaleTimeString();
@@ -42,7 +42,7 @@
             refresh: function () {
                 this.now = new Date();
                 const self = this;
-                setTimeout(() => { self.refresh() }, 1000);
+                setTimeout(() => { self.refresh() }, tenth_seconds);
             }
         },
         created: function () {
